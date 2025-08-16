@@ -1,0 +1,151 @@
+*{ 
+    margin:0;
+    padding:0;
+}
+
+body{
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background : linear-gradient(135deg, rgb(229, 146, 160), rgb(202, 103, 103), rgb(247, 57, 57));
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 30px 40px 70px; 
+    border-radius: 10px;   
+    position: relative;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    background: wheat;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    background-color: #3faf43;
+    color: #fff;
+    font-size:16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.filterBtn {
+    background: #2196F3;
+    color: white;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+ul li.fade-out {
+    opacity: 0;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+    position:absolute;
+    right: 0;
+    top:5px;
+    width:40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+#progressBar {
+    background: #ccc;
+    height:10px;
+    width:100%;
+    margin-top: 15px;
+}
+
+#progress {
+    background: #17ec1e;
+    height:100% ;
+    width:0;
+    border-radius: 5px;
+}
+
+.todo-app.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.toggle-dark {
+    position: absolute;
+    top:20px;
+    right:20px;
+    cursor: pointer;
+}
+
+.editBtn {
+    background-color: #FFC107;
+    color: #000;
+}
